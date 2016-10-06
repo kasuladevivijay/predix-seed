@@ -1,3 +1,7 @@
+# IMPORTANT ANNOUNCEMENT
+
+This branch is and will no longer be developed.  It has been merged with the 'develop', and subsequently, 'master' branches as of October 6, 2016.  Please refer to the 'develop' and 'master' branches for any new changes on this project.
+
 # Predix UI Seed
 
 ## What is the Predix UI Seed?
