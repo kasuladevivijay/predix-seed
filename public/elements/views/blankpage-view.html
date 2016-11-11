@@ -44,13 +44,25 @@
 	</px-dropdown>
       </div>
       <div class=widget-2>
-	<ul class="list-ui">
- 		 <li class="list-ui__item">Vehicle : {{selectedValue}}</li>
-		<!-- To use the Key in anyplace-->
-		<!-- <li class="list-ui__item">Key : {{selectedKey}}</li> -->
+	<table class="table table--small table--no-cells">
+  		<tbody>
+   		 <tr>
+     	 	<td>Vehicle</td>
+      		<td>:</td>
+		<td>{{selectedValue}}</td>
+    		</tr>
+ 		<tr>
+     	 	<td>Connected</td>
+      		<td>:</td>
+		<td>
+		<input id="bt_conn_flag" class="toggle__input toggle__input--small" type="checkbox"> 
+		<label for="bt_conn_flag" class="toggle__label toggle__label--small">
+		</label>
 		<!-- create a flag in Android app to check the connected status flag -->
-		 <li class="list-ui__item">Connected :	Yes</li>
-	</ul>
+		</td>
+    		</tr>
+  		</tbody>
+	</table>
 	</div>
     </px-twoup>
     
