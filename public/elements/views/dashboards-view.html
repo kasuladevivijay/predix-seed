@@ -42,35 +42,46 @@
 	</px-dropdown>
       </div>
       <div class=widget-2>
-	<ul class="list-ui">
- 		 <li class="list-ui__item">Vehicle : {{selectedValue}}</li>
-		<!-- To use the Key in anyplace-->
-		<!-- <li class="list-ui__item">Key : {{selectedKey}}</li> -->
-		<!-- create a flag in Android app to check the connected status -->
-		 <li class="list-ui__item">Connected :	Yes</li>
-		 <li class="list-ui__item"><a href="/#/track">Track Vehicle</a></li>
-	</ul>
+	<table class="table table--small table--no-cells">
+  		<tbody>
+   		 <tr>
+     	 	<td>Vehicle</td>
+      		<td>:</td>
+		<td>{{selectedValue}}</td>
+    		</tr>
+ 		<tr>
+     	 	<td>Connected</td>
+      		<td>:</td>
+		<td>
+		<button class="btn btn--bare btn--icon">
+  			<i class="fa fa-chain-broken"></i>
+		</button
+		</span>
+		</td>
+    		</tr>
+  		</tbody>
+	</table>
 	</div>
     </px-twoup>
     
     <px-sixup id="widgetsx6" widget-header="DASHBOARD" widget-icon="fa-bar-chart">
       <div class=widget-1>
-        <px-kpi id="kpi-1" title="Speed" value="{{vehicle.readings.speed}}" status-icon="circle" status-color="green" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-1" title="Speed" value="{{vehicle.readings.speed}}" status-icon="tachometer" status-color="green" spark-type="line"></px-kpi>
       </div>
       <div class=widget-2>
-        <px-kpi id="kpi-2" title="Fuel Level" value="{{vehicle.readings.fuelLevel}}" status-icon="circle" status-color="orange" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-2" title="Fuel Level" value="{{vehicle.readings.fuelLevel}}" status-icon="tint" status-color="orange" spark-type="line"></px-kpi>
       </div>
       <div class=widget-3>
-        <px-kpi id="kpi-3" title="Air Temperature" value="{{vehicle.readings.airIntakeTemp}}" uom="" status-icon="arrow-up" status-label="12%" status-color="green" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-3" title="Air Intake Temperature" value="{{vehicle.readings.airIntakeTemp}}" uom="" status-icon="fire" status-color="orange" spark-type="line"></px-kpi>
       </div>
       <div class=widget-4>
-        <px-kpi id="kpi-4" title="Engine RPM" value="{{vehicle.readings.engineRpm}}" uom="" status-icon="calendar" status-color="red" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-4" title="Engine RPM" value="{{vehicle.readings.engineRpm}}" uom="" status-icon="safari" status-color="red" spark-type="line"></px-kpi>
       </div>
       <div class=widget-5>
-        <px-kpi id="kpi-5" title="FUEL CONSUMPTION RATE" value="{{vehicle.readings.fuelConsumptionRate}}" uom="" status-icon="smile-o" status-color="orange" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-5" title="FUEL CONSUMPTION RATE" value="{{vehicle.readings.fuelConsumptionRate}}" uom="" status-icon="flask" status-color="orange" spark-type="line"></px-kpi>
       </div>
       <div class=widget-6>
-        <px-kpi id="kpi-6" title="ENGINE RUNTIME" value="{{vehicle.readings.engineRuntime}}" uom="" status-icon="smile-o" status-color="green" spark-type="line"></px-kpi>
+        <px-kpi id="kpi-6" title="ENGINE RUNTIME" value="{{vehicle.readings.engineRuntime}}" uom="" status-icon="clock-o" status-color="green" spark-type="line"></px-kpi>
       </div>
     </px-sixup> 
 
