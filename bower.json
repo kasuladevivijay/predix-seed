@@ -40,7 +40,9 @@
     "px-kpi": "^0.1.4",
     "google-map": "GoogleWebComponents/google-map#^1.1.14",
     "px-login": "^0.5.1",
-    "px-inbox": "^0.2.7"
+    "px-inbox": "^0.2.7",
+    "px-layout-design": "^0.3.19",
+    "px-forms-design": "^0.3.28"
   },
   "devDependencies": {
     "px-forms-design": "^0.3.17",

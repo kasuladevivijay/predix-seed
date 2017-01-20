@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="message-card">
+	<style>
+		:host {
+  		display: block;
+  		color: red;
+		}
+	</style>
+  <template>
+  <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: 'message-card',
+      properties: {
+		  },
+      ready: function() {
+        console.log('-- message card --');
+        var self = this;
+        setInterval(function(){
+			self.style.visibility = (self.style.visibility === 'hidden')? 'visible' : 'hidden' ;       
+        },250);
+      }
+    });
+  </script>
+</dom-module>
+

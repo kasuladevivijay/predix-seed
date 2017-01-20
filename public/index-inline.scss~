@@ -17,7 +17,6 @@ $inuit-enable-table--no-cells : true;
 
 @import "px-tables-design/_base.tables.scss";
 @import "px-forms-design/_base.forms.scss";
-@import "px-flexbox-design/_base.flexbox.scss";
 
 // Meta
 // Objects

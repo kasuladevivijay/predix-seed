@@ -169,10 +169,6 @@
               "label": "Notifications",
               "path": "/notifications",
               "icon": "fa-inbox"
-            },{
-              "label": "TestPage",
-              "path": "/test",
-              "icon": "fa-search"
             }]
           }
         },

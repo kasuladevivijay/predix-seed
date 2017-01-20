@@ -61,16 +61,6 @@
 		<!-- create a flag in Android app to check the connected status flag -->
 		</td>
     		</tr>
-		<tr>
-     	 	<td>Toggle to change color</td>
-      		<td>:</td>
-		<td>
-		<input id="bt_col_flag" class="toggle__input toggle__input--small" type="checkbox"> 
-		<label for="bt_col_flag" class="toggle__label toggle__label--small">
-		</label>
-		
-		</td>
-    		</tr>
   		</tbody>
 	</table>
 	</div>

@@ -1,0 +1,47 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/px-widget-cards/px-fourup.html">
+<link rel="import" href="../../bower_components/px-theme/px-theme.html">
+<link rel="import" href="../../bower_components/px-card/px-card.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="test-view">
+<style>
+px-card{
+margin:5px;
+}
+.flexchild{
+	margin:1em;
+}
+</style>
+
+  <template>
+	<iron-ajax
+	auto
+	url="https://predix-asset.run.aws-usw02-pr.ice.predix.io"
+	headers='{"Authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJjNjk3MGQwMmRmNjg0Mzk0OWExMTZlNzc4MmIzYTBlMiIsInN1YiI6InZkcy1jbGllbnQyIiwic2NvcGUiOlsiYW5hbHl0aWNzLnpvbmVzLmJjMDA5Y2E3LWE3YzUtNGQ5Mi1hNTNiLTY5OTExOTAzYTVjOS51c2VyIiwicHJlZGl4LWFzc2V0LnpvbmVzLmI2NGJmOTdlLTJkZGUtNDgyMy04ZTYxLWJhOTQ1ZGQ2MmNiNS51c2VyIiwidWFhLnJlc291cmNlIiwib3BlbmlkIiwidWFhLm5vbmUiLCJhbmFseXRpY3Muem9uZXMuOGNlYjM5ZTktMjFmNy00NzliLTk1ZWMtYTgwODY1ZmM3YmQwLnVzZXIiXSwiY2xpZW50X2lkIjoidmRzLWNsaWVudDIiLCJjaWQiOiJ2ZHMtY2xpZW50MiIsImF6cCI6InZkcy1jbGllbnQyIiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJmYmU1Mjg4OCIsImlhdCI6MTQ4MTcyMDgzMSwiZXhwIjoxNDgxNzY0MDMxLCJpc3MiOiJodHRwczovLzcxMTI3YWI5LTM5ODYtNGI1ZS1iNGZiLTk2NzEwYTMxZGNhMC5wcmVkaXgtdWFhLnJ1bi5hd3MtdXN3MDItcHIuaWNlLnByZWRpeC5pby9vYXV0aC90b2tlbiIsInppZCI6IjcxMTI3YWI5LTM5ODYtNGI1ZS1iNGZiLTk2NzEwYTMxZGNhMCIsImF1ZCI6WyJhbmFseXRpY3Muem9uZXMuYmMwMDljYTctYTdjNS00ZDkyLWE1M2ItNjk5MTE5MDNhNWM5IiwicHJlZGl4LWFzc2V0LnpvbmVzLmI2NGJmOTdlLTJkZGUtNDgyMy04ZTYxLWJhOTQ1ZGQ2MmNiNSIsInVhYSIsIm9wZW5pZCIsInZkcy1jbGllbnQyIiwiYW5hbHl0aWNzLnpvbmVzLjhjZWIzOWU5LTIxZjctNDc5Yi05NWVjLWE4MDg2NWZjN2JkMCJdfQ.WUoeAoj7HteP9W1AhaswgIv8-4ULE5k4RSvtsW0I-WvwR3tSXmB1aeu8NsgZZWxZ13jAKC1yhJ4REeG7J8V4c4CKcRMr0CsAWKW513Tc_5JDAgUoo1ozxOPzzFUaGk1NYEqpde4CXAkeMrYjt1rcdK9IPbB3oN-X4x6N7IQyl9OxHErVPZfEmI6RS4y_jcvgQfHyS0i87t25g0JYRy5kCkPHABMss5pNPIqVlqUoCMvFGRpOyrE7dZbIBjQ7ra28KeOzjB_nG5yR4ALrdcw_zYHunRjJ_d-PhmpP0lOVVc1X26odcIbx3bpCkFec2j9Wt_cOJ8fRBM-2R21H0Cz0mg", "Predix-Zone-Id":"b64bf97e-2dde-4823-8e61-ba945dd62cb5"}'
+	last-response="{{assetResponse}}"
+	handle-as="json"	
+	>
+	</iron-ajax>
+  <px-card header-text="Assets" icon="fa-suitcase">
+	<template is="dom-repeat" items={{assetResponse}}>
+	<ul>
+	<li><a href="">{{item.collection}}</a></li>
+	</ul>
+		
+	</template>
+  </px-card>
+
+    
+  </template>
+  <script>
+    Polymer({
+      is: 'test-view',
+      properties: {
+		  },
+      ready: function() {
+        console.log('test-view ready()')
+      }
+    });
+  </script>
+</dom-module>
